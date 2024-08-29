@@ -31,7 +31,11 @@ var reverse = function (x) {
   }
 
   let Rev = Math.sign(x) * reverseNum;
-  return Rev;
+  if (Rev >= -2147483648 && Rev <= 2147483648) {
+    return Rev;
+  } else {
+    return -1;
+  }
 };
 
 console.log(reverse(1534236469));
